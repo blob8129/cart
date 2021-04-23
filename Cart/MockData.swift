@@ -21,7 +21,7 @@ let mockItemsData =
                 "images": [
                     {
                         "thumbnail": {
-                            "url": "https://kolonial.no/media/uploads/public/386/259/130259-3a5f7-product_detail.jpg"
+                            "url": "https://bilder.kolonial.no/produkter/d0083d5f-1101-4e7c-82e8-9f4210fdbd65.jpg?fit=max&w=500&s=f995d906632c729f4e00906118d5f900"
                         },
                         "large": {
                             "url": "https://kolonial.no/media/uploads/public/386/259/130259-3a5f7-product_large.jpg"
@@ -64,7 +64,7 @@ let mockItemsData =
                 "images": [
                     {
                         "thumbnail": {
-                            "url": "https://kolonial.no/media/uploads/public/0/323/3523-483b5-product_detail.jpg"
+                            "url": "https://bilder.kolonial.no/produkter/304941bc-5b84-4b4f-9aa3-903fff81d7a9.jpg?fit=max&w=500&s=2c0747120dc502efa20b8581d3ac9a7e"
                         },
                         "large": {
                             "url": "https://kolonial.no/media/uploads/public/0/323/3523-483b5-product_large.jpg"
@@ -107,7 +107,7 @@ let mockItemsData =
                 "images": [
                     {
                         "thumbnail": {
-                            "url": "https://kolonial.no/media/uploads/public/98/180/1196180-f9f22-product_detail.jpg"
+                            "url": "https://bilder.kolonial.no/produkter/f80c58ae-b840-426b-a09b-0c5af10e96db.jpg?fit=max&w=500&s=ca4921c7e71ed495089dc66dc00e6b60"
                         },
                         "large": {
                             "url": "https://kolonial.no/media/uploads/public/98/180/1196180-f9f22-product_large.jpg"
@@ -150,7 +150,7 @@ let mockItemsData =
                 "images": [
                     {
                         "thumbnail": {
-                            "url": "https://kolonial.no/media/uploads/public/386/251/702651-579b0-product_detail.jpg"
+                            "url": "https://bilder.kolonial.no/produkter/126fa308-7672-4267-aa47-a5e6ee12f00d.jpg?fit=max&w=500&s=392ca890395bb5f88cfd69f39cd222da"
                         },
                         "large": {
                             "url": "https://kolonial.no/media/uploads/public/386/251/702651-579b0-product_large.jpg"
@@ -211,7 +211,7 @@ let mockItemsData =
                 "images": [
                     {
                         "thumbnail": {
-                            "url": "https://kolonial.no/media/uploads/public/379/163/1176963-84b5b-product_detail.jpg"
+                            "url": "https://bilder.kolonial.no/produkter/a529fcfc-785c-4740-a0a0-bc71470aac81.jpeg?fit=max&w=500&s=e04a6c419e41fe4e09d1cdbe15666e45"
                         },
                         "large": {
                             "url": "https://kolonial.no/media/uploads/public/379/163/1176963-84b5b-product_large.jpg"
@@ -254,7 +254,7 @@ let mockItemsData =
                 "images": [
                     {
                         "thumbnail": {
-                            "url": "https://kolonial.no/media/uploads/public/83/264/1084664-1d243-product_detail.jpg"
+                            "url": "https://bilder.kolonial.no/produkter/fa9f565b-c217-4581-b893-7f3bc94ce60d.png?fit=max&w=500&s=0fdb6783724e0a140b642fdbedb4b480"
                         },
                         "large": {
                             "url": "https://kolonial.no/media/uploads/public/83/264/1084664-1d243-product_large.jpg"
@@ -297,7 +297,7 @@ let mockItemsData =
                 "images": [
                     {
                         "thumbnail": {
-                            "url": "https://kolonial.no/media/uploads/public/0/386/65986-f62b8-product_detail.jpg"
+                            "url": "https://bilder.kolonial.no/produkter/db9d2348-b8a2-4d05-a775-1e6592e9b60c.jpeg?fit=max&w=500&s=14ed52869717996d791108de8b837e67"
                         },
                         "large": {
                             "url": "https://kolonial.no/media/uploads/public/0/386/65986-f62b8-product_large.jpg"
@@ -340,7 +340,7 @@ let mockItemsData =
                 "images": [
                     {
                         "thumbnail": {
-                            "url": "https://kolonial.no/media/uploads/public/110/375/1186775-5cbe8-product_detail.jpg"
+                            "url": "https://bilder.kolonial.no/produkter/33856a80-7b73-4cd3-b847-c443288ca7ee.jpeg?fit=max&w=500&s=6cdb074aa1039963eaf4d8de96c17e9f"
                         },
                         "large": {
                             "url": "https://kolonial.no/media/uploads/public/110/375/1186775-5cbe8-product_large.jpg"

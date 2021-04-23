@@ -68,29 +68,9 @@ final class CartViewController: UIViewController, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: ProductCell.reuseIdentifier,
                                                  for: indexPath) as? ProductCell
-        let item = container?.items[indexPath.row]
-        
-        cell?.textLabel?.text = item?.product.name
-        
+        if let item = container?.items[indexPath.row] {
+            cell?.configure(item.convert())
+        }
         return cell!
-    }
-}
-
-final class ProductCell: UITableViewCell {
-    
-    static let reuseIdentifier = "ProductCell"
-    
-    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
-        super.init(style: style, reuseIdentifier: reuseIdentifier)
-        commonInit()
-    }
-    
-    required init?(coder: NSCoder) {
-        super.init(coder: coder)
-        commonInit()
-    }
-    
-    func commonInit() {
-        
     }
 }

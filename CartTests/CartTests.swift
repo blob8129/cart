@@ -73,6 +73,8 @@ class CartTests: XCTestCase {
         XCTAssertEqual(item.availability, .available)
         XCTAssertEqual(item.quantity, 1)
         XCTAssertEqual(item.displayPriceTotal, "33.00")
+        XCTAssertEqual(item.product.images.first?.thumbnail.url,
+                       URL(string: "https://kolonial.no/media/uploads/public/386/259/130259-3a5f7-product_detail.jpg"))
     }
     
     func testAllItemsDecoding() throws {

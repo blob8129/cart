@@ -66,7 +66,7 @@ class ProductItemsRepositoryTests: XCTestCase {
         
         repository.fetchItems { result in
             switch result {
-            case .failure(let error):
+            case .failure:
                 XCTAssertTrue(true)
             default:
                 XCTFail()
