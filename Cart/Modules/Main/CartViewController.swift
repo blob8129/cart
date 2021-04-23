@@ -6,11 +6,18 @@
 //
 import UIKit
 
-final class CartViewController: UIViewController {
+final class CartViewController: UIViewController, UITableViewDataSource {
     
     private let repository: ProductItemsRepository
     
-    var container: ProductItemsContatiner?
+    private var container: ProductItemsContatiner?
+    
+    private lazy var tableView: UITableView = { tbv in
+        tbv.translatesAutoresizingMaskIntoConstraints = false
+        tbv.dataSource = self
+        tbv.register(ProductCell.self, forCellReuseIdentifier: ProductCell.reuseIdentifier)
+        return tbv
+    }(UITableView())
     
     init(_ repository: ProductItemsRepository) {
         self.repository = repository
@@ -23,11 +30,18 @@ final class CartViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        addAllSubviews()
+        fetchItems()
     }
     
     private func addAllSubviews() {
-    
+        view.addSubview(tableView)
+        NSLayoutConstraint.activate([
+            tableView.leftAnchor.constraint(equalTo: view.leftAnchor),
+            tableView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            view.rightAnchor.constraint(equalTo: tableView.rightAnchor),
+            view.safeAreaLayoutGuide.bottomAnchor.constraint(equalTo: tableView.bottomAnchor)
+        ])
     }
     
     private func fetchItems() {
@@ -35,11 +49,48 @@ final class CartViewController: UIViewController {
             switch result {
             case .success(let container):
                 self?.container = container
+                self?.tableView.reloadData()
             case .failure:
                 // TODO: show error
                 break
             }
         }
     }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        2
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        section == 0 ? container?.items.count ?? 0 : 0
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: ProductCell.reuseIdentifier,
+                                                 for: indexPath) as? ProductCell
+        let item = container?.items[indexPath.row]
+        
+        cell?.textLabel?.text = item?.product.name
+        
+        return cell!
+    }
 }
 
+final class ProductCell: UITableViewCell {
+    
+    static let reuseIdentifier = "ProductCell"
+    
+    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
+        super.init(style: style, reuseIdentifier: reuseIdentifier)
+        commonInit()
+    }
+    
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+        commonInit()
+    }
+    
+    func commonInit() {
+        
+    }
+}

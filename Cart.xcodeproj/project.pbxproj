@@ -154,9 +154,9 @@
 		CE3B31092631D5350092A8C0 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				CE26496926332A5A00B86CD9 /* ProductItemsRepository.swift */,
 				CE3B310F2631D9D00092A8C0 /* Entity */,
 				CE3B30F92631D31E0092A8C0 /* CartViewController.swift */,
-				CE26496926332A5A00B86CD9 /* ProductItemsRepository.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
