@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE26496A26332A5A00B86CD9 /* ProductItemsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE26496926332A5A00B86CD9 /* ProductItemsRepository.swift */; };
+		CE26496F26332D8800B86CD9 /* ProductItemsRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE26496E26332D8800B86CD9 /* ProductItemsRepositoryTests.swift */; };
 		CE3B30C42631D2830092A8C0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3B30C32631D2830092A8C0 /* AppDelegate.swift */; };
 		CE3B30C62631D2830092A8C0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3B30C52631D2830092A8C0 /* SceneDelegate.swift */; };
 		CE3B30CD2631D2850092A8C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE3B30CC2631D2850092A8C0 /* Assets.xcassets */; };
@@ -36,6 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CE26496926332A5A00B86CD9 /* ProductItemsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductItemsRepository.swift; sourceTree = "<group>"; };
+		CE26496E26332D8800B86CD9 /* ProductItemsRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductItemsRepositoryTests.swift; sourceTree = "<group>"; };
 		CE3B30C02631D2830092A8C0 /* Cart.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cart.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE3B30C32631D2830092A8C0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE3B30C52631D2830092A8C0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -114,6 +118,7 @@
 		CE3B30D92631D2850092A8C0 /* CartTests */ = {
 			isa = PBXGroup;
 			children = (
+				CE26496E26332D8800B86CD9 /* ProductItemsRepositoryTests.swift */,
 				CE3B30DA2631D2850092A8C0 /* CartTests.swift */,
 				CE3B30DC2631D2850092A8C0 /* Info.plist */,
 			);
@@ -151,6 +156,7 @@
 			children = (
 				CE3B310F2631D9D00092A8C0 /* Entity */,
 				CE3B30F92631D31E0092A8C0 /* CartViewController.swift */,
+				CE26496926332A5A00B86CD9 /* ProductItemsRepository.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -296,6 +302,7 @@
 				CE3B310B2631D6900092A8C0 /* MockData.swift in Sources */,
 				CE3B31112631D9EB0092A8C0 /* ProductItem.swift in Sources */,
 				CE3B30C42631D2830092A8C0 /* AppDelegate.swift in Sources */,
+				CE26496A26332A5A00B86CD9 /* ProductItemsRepository.swift in Sources */,
 				CE3B30C62631D2830092A8C0 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -304,6 +311,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE26496F26332D8800B86CD9 /* ProductItemsRepositoryTests.swift in Sources */,
 				CE3B30DB2631D2850092A8C0 /* CartTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -19,7 +19,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         }
         window = UIWindow(windowScene: scene)
         window?.windowScene = scene
-        window?.rootViewController = CartViewController()
+        let repository = ProductItemsRepository()
+        window?.rootViewController = CartViewController(repository)
         window?.makeKeyAndVisible()
     }
 }

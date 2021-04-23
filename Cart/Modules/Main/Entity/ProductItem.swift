@@ -9,6 +9,19 @@ import Foundation
 
 
 struct ProductItem: Decodable {
+
+    let product: Product
+    let availability: Availability
+    let quantity: Int
+    let displayPriceTotal: String
+    
+    struct Product: Decodable {
+        let id: Int
+        let name: String
+        let nameExtra: String
+        let unitPriceQuantityAbbreviation: String
+    }
+    
     enum Availability: Decodable, Equatable {
         case available
         case notAvailable(String)
@@ -28,17 +41,6 @@ struct ProductItem: Decodable {
             }
         }
     }
-    
-    struct Product: Decodable {
-        let id: Int
-        let name: String
-        let nameExtra: String
-        let unitPriceQuantityAbbreviation: String
-    }
-    let product: Product
-    let availability: Availability
-    let quantity: Int
-    let displayPriceTotal: String
 }
 
 struct ProductItemsContatiner: Decodable {
