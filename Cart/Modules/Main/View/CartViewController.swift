@@ -9,6 +9,7 @@ import UIKit
 final class CartViewController: UIViewController, UITableViewDataSource {
     
     private let repository: ProductItemsRepository
+    private let imagesService: ImagesService
     
     private var container: ProductItemsContatiner?
     
@@ -19,8 +20,9 @@ final class CartViewController: UIViewController, UITableViewDataSource {
         return tbv
     }(UITableView())
     
-    init(_ repository: ProductItemsRepository) {
+    init(_ repository: ProductItemsRepository, imagesService: ImagesService) {
         self.repository = repository
+        self.imagesService = imagesService
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -32,6 +34,10 @@ final class CartViewController: UIViewController, UITableViewDataSource {
         super.viewDidLoad()
         addAllSubviews()
         fetchItems()
+        tableView.separatorInset =  UIEdgeInsets(top: 0,
+                                                 left: (view.frame.width * 0.2) + 32,
+                                                 bottom: 0,
+                                                 right: 0)
     }
     
     private func addAllSubviews() {
@@ -69,7 +75,7 @@ final class CartViewController: UIViewController, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: ProductCell.reuseIdentifier,
                                                  for: indexPath) as? ProductCell
         if let item = container?.items[indexPath.row] {
-            cell?.configure(item.convert())
+            cell?.configure(item.convert(), imagesService: imagesService)
         }
         return cell!
     }

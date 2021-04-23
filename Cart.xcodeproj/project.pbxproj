@@ -20,6 +20,7 @@
 		CE3B30FA2631D31E0092A8C0 /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3B30F92631D31E0092A8C0 /* CartViewController.swift */; };
 		CE3B310B2631D6900092A8C0 /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3B310A2631D6900092A8C0 /* MockData.swift */; };
 		CE3B31112631D9EB0092A8C0 /* ProductItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3B31102631D9EB0092A8C0 /* ProductItem.swift */; };
+		CE6AA2382633562C00D0052B /* ImagesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6AA2372633562C00D0052B /* ImagesService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		CE3B30F92631D31E0092A8C0 /* CartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
 		CE3B310A2631D6900092A8C0 /* MockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockData.swift; sourceTree = "<group>"; };
 		CE3B31102631D9EB0092A8C0 /* ProductItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductItem.swift; sourceTree = "<group>"; };
+		CE6AA2372633562C00D0052B /* ImagesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,8 +152,8 @@
 		CE3B31072631D50C0092A8C0 /* Application */ = {
 			isa = PBXGroup;
 			children = (
-				CE3B30C32631D2830092A8C0 /* AppDelegate.swift */,
 				CE3B30C52631D2830092A8C0 /* SceneDelegate.swift */,
+				CE3B30C32631D2830092A8C0 /* AppDelegate.swift */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -167,6 +169,7 @@
 		CE3B31092631D5350092A8C0 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				CE6AA2372633562C00D0052B /* ImagesService.swift */,
 				CE26496926332A5A00B86CD9 /* ProductItemsRepository.swift */,
 				CE3B310F2631D9D00092A8C0 /* Entity */,
 				CE32EFE3263344FE004AEE8E /* View */,
@@ -312,6 +315,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE6AA2382633562C00D0052B /* ImagesService.swift in Sources */,
 				CE3B30FA2631D31E0092A8C0 /* CartViewController.swift in Sources */,
 				CE3B310B2631D6900092A8C0 /* MockData.swift in Sources */,
 				CE3B31112631D9EB0092A8C0 /* ProductItem.swift in Sources */,
