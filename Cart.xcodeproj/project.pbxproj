@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		CE26496A26332A5A00B86CD9 /* ProductItemsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE26496926332A5A00B86CD9 /* ProductItemsRepository.swift */; };
 		CE26496F26332D8800B86CD9 /* ProductItemsRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE26496E26332D8800B86CD9 /* ProductItemsRepositoryTests.swift */; };
+		CE30281C263486EF00A2A880 /* QuantityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE30281B263486EF00A2A880 /* QuantityView.swift */; };
 		CE32EFE526334510004AEE8E /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE32EFE426334510004AEE8E /* ProductCell.swift */; };
 		CE32EFED26334989004AEE8E /* ProductViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE32EFEC26334989004AEE8E /* ProductViewModel.swift */; };
 		CE3B30C42631D2830092A8C0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3B30C32631D2830092A8C0 /* AppDelegate.swift */; };
@@ -43,6 +44,7 @@
 /* Begin PBXFileReference section */
 		CE26496926332A5A00B86CD9 /* ProductItemsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductItemsRepository.swift; sourceTree = "<group>"; };
 		CE26496E26332D8800B86CD9 /* ProductItemsRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductItemsRepositoryTests.swift; sourceTree = "<group>"; };
+		CE30281B263486EF00A2A880 /* QuantityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuantityView.swift; sourceTree = "<group>"; };
 		CE32EFE426334510004AEE8E /* ProductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCell.swift; sourceTree = "<group>"; };
 		CE32EFEC26334989004AEE8E /* ProductViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewModel.swift; sourceTree = "<group>"; };
 		CE3B30C02631D2830092A8C0 /* Cart.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cart.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -93,6 +95,7 @@
 			children = (
 				CE3B30F92631D31E0092A8C0 /* CartViewController.swift */,
 				CE32EFE426334510004AEE8E /* ProductCell.swift */,
+				CE30281B263486EF00A2A880 /* QuantityView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -318,6 +321,7 @@
 				CE6AA2382633562C00D0052B /* ImagesService.swift in Sources */,
 				CE3B30FA2631D31E0092A8C0 /* CartViewController.swift in Sources */,
 				CE3B310B2631D6900092A8C0 /* MockData.swift in Sources */,
+				CE30281C263486EF00A2A880 /* QuantityView.swift in Sources */,
 				CE3B31112631D9EB0092A8C0 /* ProductItem.swift in Sources */,
 				CE3B30C42631D2830092A8C0 /* AppDelegate.swift in Sources */,
 				CE26496A26332A5A00B86CD9 /* ProductItemsRepository.swift in Sources */,

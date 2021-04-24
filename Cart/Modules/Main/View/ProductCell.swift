@@ -37,6 +37,11 @@ final class ProductCell: UITableViewCell {
         return lbl
     }(UILabel())
     
+    private lazy var quantityView: QuantityView = { qtv in
+        qtv.translatesAutoresizingMaskIntoConstraints = false
+        return qtv
+    }(QuantityView())
+    
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         commonInit()
@@ -53,6 +58,7 @@ final class ProductCell: UITableViewCell {
         contentView.addSubview(topLabel)
         contentView.addSubview(middleLabel)
         contentView.addSubview(bottomLabel)
+        contentView.addSubview(quantityView)
         
         NSLayoutConstraint.activate([
             productImageView.leftAnchor.constraint(equalTo: contentView.leftAnchor, constant: 16),
@@ -70,8 +76,11 @@ final class ProductCell: UITableViewCell {
             
             bottomLabel.leftAnchor.constraint(equalTo: productImageView.rightAnchor, constant: 16),
             bottomLabel.topAnchor.constraint(equalTo: middleLabel.bottomAnchor, constant: 16),
-            contentView.rightAnchor.constraint(equalTo: bottomLabel.rightAnchor),
-            contentView.bottomAnchor.constraint(equalTo: bottomLabel.bottomAnchor, constant: 16)
+            contentView.bottomAnchor.constraint(equalTo: bottomLabel.bottomAnchor, constant: 16),
+            
+            quantityView.leftAnchor.constraint(equalTo: bottomLabel.rightAnchor),
+            contentView.rightAnchor.constraint(equalTo: quantityView.rightAnchor),
+            quantityView.firstBaselineAnchor.constraint(equalTo: bottomLabel.firstBaselineAnchor)
         ])
     }
     
@@ -81,6 +90,7 @@ final class ProductCell: UITableViewCell {
         bottomLabel.text = viewModel.price
         setDefaultStyle(isSubtitleHighlighted: viewModel.isSubtitleHighlighted)
         
+        quantityView.quantityState = viewModel.quantityState
         imageURL = viewModel.imageURL
         guard let imageURL = imageURL else {
             return

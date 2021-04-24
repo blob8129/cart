@@ -12,7 +12,7 @@ struct ProductViewModel {
     let subtitle: String
     let isSubtitleHighlighted: Bool
     let price: String
-    let initialQuntity: Int
+    let quantityState: QuantityState
     let imageURL: URL?
 }
 
@@ -30,11 +30,21 @@ extension ProductItem {
         }
         let imageURL = product.images.first?.thumbnail.url ?? URL(string: "https://kolonial.no/media/uploads/placeholder.jpg")
         
+        let quantityState: QuantityState
+        switch (quantity, availability) {
+        case (_, .notAvailable):
+            quantityState = .disabled
+        case (let q, _) where q > 0:
+            quantityState = .value(q)
+        default:
+            quantityState = .initial
+        }
+        
         return ProductViewModel(title: product.name,
                                 subtitle: subtitle,
                                 isSubtitleHighlighted: isSubtitleHighlighted,
                                 price: "kr \(displayPriceTotal)",
-                                initialQuntity: quantity,
+                                quantityState: quantityState,
                                 imageURL: imageURL)
     }
 }

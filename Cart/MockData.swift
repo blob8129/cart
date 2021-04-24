@@ -361,7 +361,7 @@ let mockItemsData =
                 },
                 "client_classifiers": []
             },
-            "quantity": 1,
+            "quantity": 0,
             "display_price_total": "13.90",
             "discounted_display_price_total": "13.90",
             "availability": {
