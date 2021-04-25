@@ -70,11 +70,11 @@ final class ProductCell: UITableViewCell {
             topLabel.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 16),
             contentView.rightAnchor.constraint(equalTo: topLabel.rightAnchor),
       
-            middleLabel.leftAnchor.constraint(equalTo: productImageView.rightAnchor, constant: 16),
+            middleLabel.leftAnchor.constraint(equalTo: topLabel.leftAnchor),
             middleLabel.topAnchor.constraint(equalTo: topLabel.bottomAnchor, constant: 8),
             contentView.rightAnchor.constraint(equalTo: middleLabel.rightAnchor),
             
-            bottomLabel.leftAnchor.constraint(equalTo: productImageView.rightAnchor, constant: 16),
+            bottomLabel.leftAnchor.constraint(equalTo: topLabel.leftAnchor),
             bottomLabel.topAnchor.constraint(equalTo: middleLabel.bottomAnchor, constant: 16),
             contentView.bottomAnchor.constraint(equalTo: bottomLabel.bottomAnchor, constant: 16),
             

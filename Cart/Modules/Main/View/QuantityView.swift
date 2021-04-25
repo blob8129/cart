@@ -7,7 +7,7 @@
 
 import UIKit
 
-enum QuantityState {
+enum QuantityState: Equatable {
     case initial
     case value(Int)
     case disabled

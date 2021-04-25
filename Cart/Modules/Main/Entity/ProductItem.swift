@@ -61,5 +61,11 @@ struct ProductItem: Decodable {
 }
 
 struct ProductItemsContatiner: Decodable {
+    struct Extra: Decodable {
+        let description: String
+        let grossAmount: String
+    }
+    
     let items: [ProductItem]
+    let extraLines: [Extra]
 }

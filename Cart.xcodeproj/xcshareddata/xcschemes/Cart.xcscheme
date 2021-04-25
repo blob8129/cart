@@ -26,7 +26,8 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      shouldUseLaunchSchemeArgsEnv = "YES">
+      shouldUseLaunchSchemeArgsEnv = "YES"
+      codeCoverageEnabled = "YES">
       <Testables>
          <TestableReference
             skipped = "NO">
@@ -35,16 +36,6 @@
                BlueprintIdentifier = "CE3B30D52631D2850092A8C0"
                BuildableName = "CartTests.xctest"
                BlueprintName = "CartTests"
-               ReferencedContainer = "container:Cart.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "CE3B30E02631D2850092A8C0"
-               BuildableName = "CartUITests.xctest"
-               BlueprintName = "CartUITests"
                ReferencedContainer = "container:Cart.xcodeproj">
             </BuildableReference>
          </TestableReference>

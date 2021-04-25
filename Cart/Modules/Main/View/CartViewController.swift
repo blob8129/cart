@@ -10,13 +10,13 @@ final class CartViewController: UIViewController, UITableViewDataSource {
     
     private let repository: ProductItemsRepository
     private let imagesService: ImagesService
-    
     private var container: ProductItemsContatiner?
     
     private lazy var tableView: UITableView = { tbv in
         tbv.translatesAutoresizingMaskIntoConstraints = false
         tbv.dataSource = self
         tbv.register(ProductCell.self, forCellReuseIdentifier: ProductCell.reuseIdentifier)
+        tbv.register(ExtraCell.self, forCellReuseIdentifier: ExtraCell.reuseIdentifier)
         return tbv
     }(UITableView())
     
@@ -32,12 +32,15 @@ final class CartViewController: UIViewController, UITableViewDataSource {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = .systemBackground
+        tableView.separatorInset = UIEdgeInsets(top: 0,
+                                                left: (view.frame.width * 0.2) + 32,
+                                                bottom: 0,
+                                                right: 0)
+        navigationController?.navigationBar.prefersLargeTitles = true
+        title = "Cart"
         addAllSubviews()
         fetchItems()
-        tableView.separatorInset =  UIEdgeInsets(top: 0,
-                                                 left: (view.frame.width * 0.2) + 32,
-                                                 bottom: 0,
-                                                 right: 0)
     }
     
     private func addAllSubviews() {
@@ -68,15 +71,24 @@ final class CartViewController: UIViewController, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        section == 0 ? container?.items.count ?? 0 : 0
+        guard let container = container else { return 0 }
+        return section == 0 ? container.items.count : container.extraLines.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: ProductCell.reuseIdentifier,
-                                                 for: indexPath) as? ProductCell
-        if let item = container?.items[indexPath.row] {
-            cell?.configure(item.convert(), imagesService: imagesService)
+        guard let container = container else { return UITableViewCell() }
+        if indexPath.section == 0 {
+            let cell = tableView.dequeueReusableCell(withIdentifier: ProductCell.reuseIdentifier,
+                                                     for: indexPath) as? ProductCell
+            cell?.configure(container.items[indexPath.row].convert(), imagesService: imagesService)
+            return cell!
+        } else {
+            let cell = tableView.dequeueReusableCell(withIdentifier: ExtraCell.reuseIdentifier,
+                                                     for: indexPath) as? ExtraCell
+            let extraItem = container.extraLines[indexPath.row]
+            cell?.textLabel?.text = extraItem.description
+            cell?.detailTextLabel?.text = extraItem.grossAmount
+            return cell!
         }
-        return cell!
     }
 }
